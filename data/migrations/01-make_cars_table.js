@@ -2,12 +2,12 @@ exports.up = function (knex) {
   // DO YOUR MAGIC
 return knex.schema.createTable('Cars', tbl => {
   tbl.increments();
-  tbl.text('vin', 128);
-  tbl.text('make', 60);
-  tbl.text('model', 60);
-  tbl.integer('mileage');
-  tbl.text('title', 60);
-  tbl.text('transmission', 60);
+  tbl.varchar('vin', 128).notNullable().unique(); //not null; unique
+  tbl.varchar('make', 60).notNullable();
+  tbl.varchar('model', 60).notNullable();
+  tbl.integer('mileage').notNullable();
+  tbl.varchar('title', 60);
+  tbl.varchar('transmission', 60);
 })
 
 

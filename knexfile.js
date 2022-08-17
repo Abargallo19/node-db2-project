@@ -19,6 +19,7 @@ module.exports = {
   development: {
     ...sharedConfig,
     connection: { filename: './data/dealer.db3' },
+    
   },
   testing: {
     ...sharedConfig,
